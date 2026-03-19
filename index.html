@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BBG'S BIRTHDAYYY <3</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background: linear-gradient(to right,#ffdde1, #ee9ca7);
+            padding-top: 100px;
+            overflow: hidden;
+            color: white;
+        }
+
+        #mainContent {
+            display: none;
+        }
+
+        #countdown {
+            display: none;
+            font-size: 80px;
+            font-weight: bold;
+            margin-top: 50px;
+        }
+
+        input {
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #ff4d88;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        .balloons {
+            font-size: 40px;
+            position: fixed;
+            bottom: -100px;
+            width: 100%;
+            animation: floatUp 6s linear infinite;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-120vh); }
+        }
+
+        @keyframes pop {
+            0% { transform: scale(0.5); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- 🎉 Confetti -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<script>
+function blastConfetti() {
+    confetti({
+        particleCount: 200,
+        spread: 120,
+        origin: { y: 0.6 }
+    });
+}
+</script>
+
+<!-- 🎈 Balloons -->
+<div class="balloons">
+🎈 🎈 🎈 🎈 🎈 🎈 🎈 🎈 🎈
+</div>
+
+<!-- 🔐 PASSWORD SCREEN -->
+<div id="login">
+    <h2>Enter the passcode 👀</h2>
+    <input type="password" id="password">
+    <br>
+    <button onclick="checkPassword()">Unlock 💌</button>
+</div>
+
+<!-- ⏳ COUNTDOWN -->
+<div id="countdown">3</div>
+
+<!-- 🎉 MAIN CONTENT -->
+<div id="mainContent">
+    <h1 style="font-size:50px; animation: pop 1s ease;">🎉 HAPPY BIRTHDAY 🎉</h1>
+
+    <h1>🎉 HAPPY BIRTHDAY CUTIEEE!! 🎉</h1>
+    <p>You’re one of the best people I met 💕</p>
+    <p>I’m really glad you exist ✨</p>
+    <p>Hope this year brings you everything you deserve 🌸</p
+    <p>And also thanks for being Juliana to by Clive Bixby 😘</p                                              
+</div>
+
+<script>
+function checkPassword() {
+    var password = document.getElementById("password").value;
+
+    if (password === "Juliana") {  // 👉 CHANGE THIS
+        document.getElementById("login").style.display = "none";
+        startCountdown();
+    } else {
+        alert("nahhh that's not it 👀 try again cutu");
+    }
+}
+
+function startCountdown() {
+    var count = 3;
+    var countdownEl = document.getElementById("countdown");
+    countdownEl.style.display = "block";
+
+    var interval = setInterval(function() {
+        countdownEl.innerHTML = count;
+        count--;
+
+        if (count < 0) {
+            clearInterval(interval);
+            countdownEl.style.display = "none";
+            showMain();
+        }
+    }, 1000);
+}
+
+function showMain() {
+    document.getElementById("mainContent").style.display = "block";
+    blastConfetti();
+}
+</script>
+
+</body>
+</html>
