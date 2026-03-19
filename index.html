@@ -8,17 +8,16 @@
     body {
         font-family: 'Poppins', sans-serif;
         text-align: center;
-     background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+        background: linear-gradient(to right, #a1c4fd, #c2e9fb);
         padding-top: 100px;
         overflow: hidden;
-     color: #1e3a8a;
+        color: #1e3a8a;
     }
 
-      h1 {
-    font-size: 60px;
-    letter-spacing: 2px;
-    color: #1e3a8a;
-}
+    h1 {
+        font-size: 60px;
+        letter-spacing: 2px;
+        color: #1e3a8a;
         animation: pop 1s ease;
     }
 
@@ -28,25 +27,21 @@
         margin-bottom: 20px;
     }
 
-        p {
-            font-size: 20px;
-    margin: 12px 0;
-    line-height: 1.7;
-}
+    p {
+        font-size: 20px;
+        margin: 12px 0;
+        line-height: 1.7;
         animation: fadeIn 2s ease;
     }
-#mainContent {
-    background: rgba(255, 255, 255, 0.35);
-    padding: 25px;
-    border-radius: 20px;
-    display: none;
-    max-width: 600px;
-    margin: auto;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-};
-};
-}
-}
+
+    #mainContent {
+        background: rgba(255, 255, 255, 0.35);
+        padding: 25px;
+        border-radius: 20px;
+        display: none;
+        max-width: 600px;
+        margin: 30px auto;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     }
 
     #countdown {
@@ -64,7 +59,7 @@
 
     button {
         padding: 12px 25px;
-    background: #3b82f6;
+        background: #3b82f6;
         color: white;
         border: none;
         border-radius: 20px;
@@ -74,7 +69,7 @@
     }
 
     button:hover {
-  background: #2563eb;
+        background: #2563eb;
         transform: scale(1.05);
     }
 
@@ -105,7 +100,6 @@ function blastConfetti() {
 }
 </script>
 
-
 <!-- 🔐 PASSWORD SCREEN -->
 <div id="login">
     <h2>Enter the passcode 👀</h2>
@@ -119,19 +113,19 @@ function blastConfetti() {
 
 <!-- 🎉 MAIN CONTENT -->
 <div id="mainContent">
-    <h1 style="font-size:50px; animation: pop 1s ease;">🎉 HAPPY BIRTHDAY CUTIEEE!! 🎉</h1>
+    <h1>🎉 HAPPY BIRTHDAY CUTIEEE!! 🎉</h1>
 
     <p>You’re one of the best people I met 💕</p>
     <p>I’m really glad you exist ✨</p>
-    <p>Hope this year brings you everything you deserve 🌸</p
-    <p>And also thanks for being Juliana to by Clive Bixby 😘</p                                              
+    <p>Hope this year brings you everything you deserve 🌸</p>
+    <p>And also thanks for being Juliana to my Clive Bixby 😘</p>
 </div>
 
 <script>
 function checkPassword() {
     var password = document.getElementById("password").value;
 
-    if (password === "Juliana") {  // 👉 CHANGE THIS
+    if (password === "Juliana") {
         document.getElementById("login").style.display = "none";
         startCountdown();
     } else {
